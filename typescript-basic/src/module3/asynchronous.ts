@@ -25,6 +25,7 @@ const getTodoData = async (): Promise<void> => {
   console.log(result);
 };
 getTodoData;
+
 const makePromise = (): Promise<dataType> => {
   return new Promise<dataType>((resolve, reject) => {
     const data: dataType = {
