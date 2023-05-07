@@ -1,3 +1,53 @@
+class Animal {
+  name: string;
+  species: string;
+
+  constructor(name: string, species: string) {
+    this.name = name;
+    this.species = species;
+  }
+  makeSound() {
+    console.log("I make sound ");
+  }
+}
+
+class Dog extends Animal {
+  constructor(name: string, species: string) {
+    super(name, species);
+  }
+  barking() {
+    console.log("I make sound bark");
+  }
+}
+
+class Cat extends Animal {
+  constructor(name: string, species: string) {
+    super(name, species);
+  }
+  mewaing() {
+    console.log("I make sound meawing");
+  }
+}
+
+const isDog = (animal: Animal): animal is Dog => {
+  return animal instanceof Dog;
+};
+
+const getAnimalSound = (animal: Animal) => {
+  if (isDog(animal)) {
+    animal.barking();
+  } else if (animal instanceof Cat) {
+    animal.mewaing();
+  } else {
+    animal.makeSound();
+  }
+};
+
+const dog = new Dog("dog", "german shepard");
+const cat = new Cat("cat", "billu");
+
+getAnimalSound(cat);
+
 type normalUser = {
   name: string;
 };
