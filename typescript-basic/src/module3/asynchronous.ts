@@ -8,6 +8,7 @@ interface IDataType {
     name: string;
   };
 }
+
 interface ITodo {
   userId: number;
   id: number;
@@ -24,6 +25,7 @@ const getTodoData = async (): Promise<void> => {
   const result = await getTodo();
   console.log(result);
 };
+
 getTodoData;
 
 const makePromise = (): Promise<dataType> => {

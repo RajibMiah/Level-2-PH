@@ -43,7 +43,7 @@ const getAnimalSound = (animal: Animal) => {
   }
 };
 
-const dog = new Dog("dog", "german shepard");
+const dog = new Dog("dog", "german shaferd");
 const cat = new Cat("cat", "billu");
 
 getAnimalSound(cat);
